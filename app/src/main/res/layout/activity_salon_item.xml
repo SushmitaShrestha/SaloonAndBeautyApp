@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="#eee"
+    android:paddingLeft="20dp"
+    android:paddingTop="16dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="15dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="15dp"
+        app:cardMaxElevation="15dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/salonIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="TODO"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/salon1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:background="#B5000000" />
+
+            <Button
+                android:id="@+id/salonNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif"
+                android:text="Bushra Salon"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+
+        <ImageView
+            android:id="@+id/salonIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/salon3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:background="#A4000000" />
+
+        <TextView
+            android:id="@+id/salonNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:text="Mahrose Beauty Salon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#fff" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:text="Appointment"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/calender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/heading1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/datepicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/calendar_logo"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:onClick="selectDate"
+                android:padding="5dp"
+                android:text="Select your date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/timePicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/picktime"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:onClick="selectTime"
+                android:text="Select your time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/calender"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#ddd" />
+
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:text="Services"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/pay"
+            android:layout_below="@+id/heading2"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/activity_item" />
+
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape"
+            android:onClick="pay"
+            android:text="Confirm Appointment"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#4EFA0E" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="#fff"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/salonNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bushra Beauty Salon"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/activity_item"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/timeTv"
+            android:layout_below="@+id/salonNameTv"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="3:00 PM"
+            android:textColor="#AEABAB"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="Monday July, 12 2020"
+            android:textColor="#AEABAB"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

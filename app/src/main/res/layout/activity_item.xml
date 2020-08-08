@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/serviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Facial"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#666" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:buttonTint="#666"
+        android:layoutDirection="rtl"
+        android:textColor="#666"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/serviceCharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/checkbox"
+        android:text="$50"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#666" />
+
+</RelativeLayout>
